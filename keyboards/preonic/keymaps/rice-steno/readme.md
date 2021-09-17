@@ -20,7 +20,7 @@ Compile with `make preonic/rev3:steno-rice`
  |------+------+------+------+------+------|------+------+------+------+------+------|
  | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Enter |
  |------+------+------+------+------+------+------+------+------+------+------+------|
- | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
+ | Ctrl | Alt  | GUI  |STENO |Lower |    Space    |Raise | Left | Down |  Up  |Right |
  `-----------------------------------------------------------------------------------'
 ```
 
