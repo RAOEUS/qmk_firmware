@@ -7,7 +7,8 @@
   - Since there's no right shift key, it makes writing a little easier when it is ON
   - When gaming, auto shift should be disabled.
 
-Compile with `make preonic/rev3:steno-rice`
+Compile with `make preonic/rev3:rice-steno`
+Compile AND flash with `make preonic/rev3:rice-steno:dfu-util`
 
 ## Base layers
 
