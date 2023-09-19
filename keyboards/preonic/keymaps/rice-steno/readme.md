@@ -3,6 +3,9 @@
 - Based on the default Preonic keymap
 - Removed Coleman/Dvorak layers
 - Added stenograpy layer
+- Added `AUTOSH` key code to toggle automatic shift when a key is held down.
+  - Since there's no right shift key, it makes writing a little easier when it is ON
+  - When gaming, auto shift should be disabled.
 
 Compile with `make preonic/rev3:steno-rice`
 
