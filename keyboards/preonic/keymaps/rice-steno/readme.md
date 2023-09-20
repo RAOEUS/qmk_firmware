@@ -44,7 +44,7 @@ Compile AND flash with `make preonic/rev3:rice-steno:dfu-util`
 `-----------------------------------------------------------------------------------'
 ```
 
-## Momentarily Layers
+## Momentary Layers
 
 ### Lower
 
