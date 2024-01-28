@@ -75,7 +75,8 @@ Hold the RAISE key in QWERTY mode to use this layer.
 ## BOTH
 
 Hold both the LOWER and RAISE keys in QWERTY mode to use this layer
-Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
+
+> NOTE: Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
 
     /* 
      * .---------------------------------------------   .-----------------------------------------------------.
