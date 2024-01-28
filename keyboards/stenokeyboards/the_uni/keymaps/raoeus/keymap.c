@@ -33,17 +33,18 @@ enum keycodes {
 enum uni_layers { _STENO, _QWERTY, _RAISE, _LOWER, _BOTH };
 
 // QWERTY COMBOS
-const uint16_t PROGMEM combo_a[]     = {KC_Q, KC_Z, COMBO_END};
-const uint16_t PROGMEM combo_s[]     = {KC_W, KC_X, COMBO_END};
-const uint16_t PROGMEM combo_d[]     = {KC_E, KC_C, COMBO_END};
-const uint16_t PROGMEM combo_f[]     = {KC_R, KC_V, COMBO_END};
-const uint16_t PROGMEM combo_g[]     = {KC_T, KC_B, COMBO_END};
-const uint16_t PROGMEM combo_h[]     = {KC_Y, KC_N, COMBO_END};
-const uint16_t PROGMEM combo_j[]     = {KC_U, KC_M, COMBO_END};
-const uint16_t PROGMEM combo_k[]     = {KC_I, KC_COMM, COMBO_END};
-const uint16_t PROGMEM combo_l[]     = {KC_O, KC_DOT, COMBO_END};
-const uint16_t PROGMEM combo_scln[]  = {KC_P, KC_SLSH, COMBO_END};
-const uint16_t PROGMEM combo_quote[] = {KC_BSPC, KC_DEL, COMBO_END};
+const uint16_t PROGMEM combo_a[]           = {KC_Q, KC_Z, COMBO_END};
+const uint16_t PROGMEM combo_s[]           = {KC_W, KC_X, COMBO_END};
+const uint16_t PROGMEM combo_shift_click[] = {KC_W, KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM combo_d[]           = {KC_E, KC_C, COMBO_END};
+const uint16_t PROGMEM combo_f[]           = {KC_R, KC_V, COMBO_END};
+const uint16_t PROGMEM combo_g[]           = {KC_T, KC_B, COMBO_END};
+const uint16_t PROGMEM combo_h[]           = {KC_Y, KC_N, COMBO_END};
+const uint16_t PROGMEM combo_j[]           = {KC_U, KC_M, COMBO_END};
+const uint16_t PROGMEM combo_k[]           = {KC_I, KC_COMM, COMBO_END};
+const uint16_t PROGMEM combo_l[]           = {KC_O, KC_DOT, COMBO_END};
+const uint16_t PROGMEM combo_scln[]        = {KC_P, KC_SLSH, COMBO_END};
+const uint16_t PROGMEM combo_quote[]       = {KC_BSPC, KC_DEL, COMBO_END};
 // LOWER COMBOS
 const uint16_t PROGMEM combo_caps[]   = {KC_1, KC_GRV, COMBO_END};
 const uint16_t PROGMEM combo_ent1[]   = {KC_BSPC, KC_BSLS, COMBO_END};
@@ -60,7 +61,7 @@ const uint16_t PROGMEM combo_right2[] = {KC_F9, KC_MNXT, COMBO_END};
 
 combo_t key_combos[] = {
     // QWERTY COMBOS
-    COMBO(combo_a, KC_A), COMBO(combo_s, KC_S), COMBO(combo_d, KC_D), COMBO(combo_f, KC_F), COMBO(combo_g, KC_G), COMBO(combo_h, KC_H), COMBO(combo_j, KC_J), COMBO(combo_k, KC_K), COMBO(combo_l, KC_L), COMBO(combo_scln, KC_SCLN), COMBO(combo_quote, KC_QUOT),
+    COMBO(combo_a, KC_A), COMBO(combo_s, KC_S), COMBO(combo_shift_click, LSFT(KC_MS_BTN1)), COMBO(combo_d, KC_D), COMBO(combo_f, KC_F), COMBO(combo_g, KC_G), COMBO(combo_h, KC_H), COMBO(combo_j, KC_J), COMBO(combo_k, KC_K), COMBO(combo_l, KC_L), COMBO(combo_scln, KC_SCLN), COMBO(combo_quote, KC_QUOT),
 
     // LOWER COMBOS
     COMBO(combo_caps, KC_CAPS), COMBO(combo_ent1, KC_ENT), COMBO(combo_left1, KC_LEFT), COMBO(combo_down1, KC_DOWN), COMBO(combo_up1, KC_UP), COMBO(combo_right1, KC_RIGHT),
