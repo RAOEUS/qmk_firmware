@@ -39,6 +39,7 @@ Row 2 is the combined key presses of the corresponding keys above and below on l
 ## LOWER
 
 Hold the LOWER key in QWERTY mode to use this layer.
+Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
 
     /* 
      * .---------------------------------------------   .-----------------------------------------------------.
@@ -55,6 +56,7 @@ Hold the LOWER key in QWERTY mode to use this layer.
 ## RAISE
 
 Hold the RAISE key in QWERTY mode to use this layer.
+Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
 
     /* 
      * .---------------------------------------------   .-----------------------------------------------------.
@@ -71,6 +73,7 @@ Hold the RAISE key in QWERTY mode to use this layer.
 ## BOTH
 
 Hold both the LOWER and RAISE keys in QWERTY mode to use this layer
+Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
 
     /* 
      * .---------------------------------------------   .-----------------------------------------------------.
