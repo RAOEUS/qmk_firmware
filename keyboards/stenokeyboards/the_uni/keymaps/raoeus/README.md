@@ -24,6 +24,8 @@ Had to sacrifice the left # for changing to QWERTY
 
 > NOTE: Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
 
+`WXC`or `SC` can be pressed to send a **S**hift **C**lick at the cursor's current location
+
     /*
      * .---------------------------------------------   .-----------------------------------------------------.
      * | Q      | W      | E      | R      | T      |   | Y      | U      | I      | O      | P      | BSPC   |
