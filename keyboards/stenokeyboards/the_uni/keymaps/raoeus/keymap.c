@@ -18,6 +18,10 @@
 
 #include QMK_KEYBOARD_H
 
+// Timing for tapping EXT_STN to switch to QWERTY
+#define TAPPING_TERM 200
+static uint16_t ext_stn_timer;
+
 void matrix_init_user(void) {
     steno_set_mode(STENO_MODE_GEMINI); // or STENO_MODE_BOLT
 }
@@ -30,7 +34,7 @@ enum keycodes {
     EXT_STN,
 };
 
-enum uni_layers { _STENO, _QWERTY, _RAISE, _LOWER, _BOTH };
+enum uni_layers { _STENO, _UTILITY, _QWERTY, _RAISE, _LOWER, _BOTH };
 
 // QWERTY COMBOS
 const uint16_t PROGMEM combo_a[]           = {KC_Q, KC_Z, COMBO_END};
@@ -71,15 +75,37 @@ combo_t key_combos[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    [_QWERTY] = LAYOUT(KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSPC, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_DEL, KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, LOWER, RAISE),
+    // clang-format off
+    [_QWERTY] = LAYOUT(
+        KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,     KC_BSPC,
+        KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  KC_DEL,
+                          KC_LCTL, KC_LGUI, KC_LALT, KC_SPC,  LOWER,   RAISE),
 
-    [_STENO] = LAYOUT(STN_S1, STN_TL, STN_PL, STN_HL, STN_ST1, STN_ST3, STN_FR, STN_PR, STN_LR, STN_TR, STN_DR, STN_S2, STN_KL, STN_WL, STN_RL, STN_ST2, STN_ST4, STN_RR, STN_BR, STN_GR, STN_SR, STN_ZR, EXT_STN, STN_A, STN_O, STN_E, STN_U, STN_N2),
+    [_UTILITY] = LAYOUT(
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,
+        KC_LSFT, KC_LCTL, KC_LALT, KC_LCMD, KC_SPC,  KC_VOLD, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_VOLU,
+                          _______, STN_N1,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX),
 
-    [_LOWER] = LAYOUT(KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_GRV, XXXXXXX, XXXXXXX, KC_TAB, KC_ESC, KC_PSCR, KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS, KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, _______, _______),
+    [_STENO] = LAYOUT(
+        STN_S1,  STN_TL,  STN_PL,  STN_HL,  STN_ST1, STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,   STN_DR,
+        STN_S2,  STN_KL,  STN_WL,  STN_RL,  STN_ST2, STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,   STN_ZR,
+                          EXT_STN, STN_A,   STN_O,   STN_E,   STN_U,   STN_N2),
 
-    [_RAISE] = LAYOUT(KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, XXXXXXX, XXXXXXX, XXXXXXX, KC_TAB, KC_ESC, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, KC_MPLY, KC_F12, KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, _______, _______),
+    [_LOWER] = LAYOUT(
+        KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,     KC_BSPC,
+        KC_GRV,  XXXXXXX, XXXXXXX, KC_TAB,  KC_ESC,  KC_PSCR, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC,  KC_BSLS,
+                          KC_LCTL, KC_LGUI, KC_LALT, KC_SPC,  _______, _______),
 
-    [_BOTH] = LAYOUT(XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, STENO, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______),
+    [_RAISE] = LAYOUT(
+        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,
+        XXXXXXX, XXXXXXX, XXXXXXX, KC_TAB,  KC_ESC,  KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, KC_MPLY,  KC_F12,
+                          KC_LCTL, KC_LGUI, KC_LALT, KC_SPC,  _______, _______),
+
+    [_BOTH] = LAYOUT(
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,
+                          STENO,   XXXXXXX, XXXXXXX, XXXXXXX, _______, _______),
+    // clang-format on
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -98,9 +124,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
         case EXT_STN:
             if (record->event.pressed) {
-                layer_off(_STENO);
-                layer_on(_QWERTY);
-                layer_move(_QWERTY);
+                // Key is pressed. Note the time.
+                ext_stn_timer = timer_read();
+                layer_on(_UTILITY);
+            } else {
+                // Key is released. If it was less than TAPPING_TERM since press, switch layers.
+                if (timer_elapsed(ext_stn_timer) < TAPPING_TERM) {
+                    layer_off(_STENO);
+                    layer_on(_QWERTY);
+                    layer_move(_QWERTY);
+                }
+                layer_off(_UTILITY);
             }
             return false;
         case LOWER:

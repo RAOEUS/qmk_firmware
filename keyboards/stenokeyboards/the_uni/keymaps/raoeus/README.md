@@ -9,6 +9,7 @@ To compile _and_ flash, please run `make stenokeyboards/the_uni/pro_micro:raoeus
 ## STENO
 
 Had to sacrifice the left # for changing to QWERTY
+MULTI key switches to UTILITY layer while held down, and switches to QWERTY layer when tapped
 
     /* 
      * .---------------------------------------------   .-----------------------------------------------------.
@@ -16,12 +17,24 @@ Had to sacrifice the left # for changing to QWERTY
      * |--------+--------+--------+--------+--------+   +--------+--------+--------+--------+--------+--------|
      * | S      | K      | W      | R      | *      |   | *      | R      | B      | G      | S      | Z      |
      * '--------+--------+--------+--------+--------+   +-----------------+--------+--------+--------+--------'
-     *                   | QWERTY | A      | O      |   | E      | U      | #      | 
+     *                   | MULTI  | A      | O      |   | E      | U      | #      | 
+     *                   '--------------------------'   '--------------------------'
+     */
+
+## UTILITY
+This is a momentary utility layer when MULTI is held in steno mode
+This can be used to shift click or control click when needed.
+    /* 
+     * .---------------------------------------------   .-----------------------------------------------------.
+     * |        |        |        |        |        |   |        |        |        |        |        |        |
+     * |--------+--------+--------+--------+--------+   +--------+--------+--------+--------+--------+--------|
+     * | SHIFT  | CTRL   | ALT    | LGUI   | SPACE  |   | VOL-   | LEFT   | DOWN   | UP     | RIGHT  | VOL+   |
+     * '--------+--------+--------+--------+--------+   +-----------------+--------+--------+--------+--------'
+     *                   | HELD   | #      |        |   |        |        |        | 
      *                   '--------------------------'   '--------------------------'
      */
 
 ## QWERTY
-
 > NOTE: Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
 
 `WXC`or `SC` can be pressed to send a **S**hift **C**lick at the cursor's current location
