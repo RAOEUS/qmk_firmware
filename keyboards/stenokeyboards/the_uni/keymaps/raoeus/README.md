@@ -6,8 +6,9 @@ To compile this keymap `make stenokeyboards/the_uni/pro_micro:raoeus`
 
 To compile _and_ flash, please run `make stenokeyboards/the_uni/pro_micro:raoeus:flash`
 
-## STENO
+## STENO LAYERS
 
+### STENO
 Had to sacrifice the left # for changing to QWERTY
 MULTI key switches to UTILITY layer while held down, and switches to QWERTY layer when tapped
 
@@ -21,8 +22,8 @@ MULTI key switches to UTILITY layer while held down, and switches to QWERTY laye
      *                   '--------------------------'   '--------------------------'
      */
 
-## UTILITY
-This is a momentary utility layer when MULTI is held in steno mode. This can be used to shift click or control click when needed, with volume controls.
+### UTILITY
+Hold down the MULTI key in the STENO layer to use these keys momentarily. This can be used to shift click or control click when needed, with volume controls.
 
     /* 
      * .---------------------------------------------   .-----------------------------------------------------.
@@ -34,7 +35,10 @@ This is a momentary utility layer when MULTI is held in steno mode. This can be 
      *                   '--------------------------'   '--------------------------'
      */
 
-## QWERTY
+## QWERTY LAYERS
+
+### QWERTY
+
 > NOTE: Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
 
 `WXC`or `SC` can be pressed to send a **S**hift **C**lick at the cursor's current location
@@ -51,7 +55,7 @@ This is a momentary utility layer when MULTI is held in steno mode. This can be 
      *                   '--------------------------'   '--------------------------'
      */
 
-## LOWER
+### LOWER
 
 Hold the LOWER key in QWERTY mode to use this layer.
 
@@ -69,7 +73,7 @@ Hold the LOWER key in QWERTY mode to use this layer.
      *                   '--------------------------'   '--------------------------'
      */
 
-## RAISE
+### RAISE
 
 Hold the RAISE key in QWERTY mode to use this layer.
 
@@ -87,7 +91,7 @@ Hold the RAISE key in QWERTY mode to use this layer.
      *                   '--------------------------'   '--------------------------'
      */
 
-## BOTH
+### BOTH
 
 Hold both the LOWER and RAISE keys in QWERTY mode to use this layer
 
