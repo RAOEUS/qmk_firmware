@@ -16,7 +16,6 @@ The default Uni V2 keymap made it impossible to use as your only board. I was ti
 ## STENO LAYERS
 
 ### STENO
-Had to sacrifice the left # for changing to QWERTY
 MULTI key switches to UTILITY layer while held down, and switches to QWERTY layer when tapped
 
     /* 
