@@ -29,13 +29,15 @@ MULTI key switches to UTILITY layer while held down, and switches to QWERTY laye
      */
 
 ### UTILITY
-Hold down the MULTI key in the STENO layer to use these keys momentarily. This can be used to shift click or control click when needed, with volume controls.
+Hold down the MULTI key in the STENO layer to use these keys momentarily. 
+
+On the left, we have various modifiers. On the right, we have arrow keys and media controls.
 
     /* 
      * .---------------------------------------------   .-----------------------------------------------------.
-     * |        |        |        |        |        |   |        |        |        |        |        |        |
+     * |        |        |        |        |        |   |        | MPREV  | VOLUP  | VOLDN  | MNEXT  |        |
      * |--------+--------+--------+--------+--------+   +--------+--------+--------+--------+--------+--------|
-     * | SHIFT  | CTRL   | LGUI   | LALT   | SPACE  |   | VOL-   | LEFT   | DOWN   | UP     | RIGHT  | VOL+   |
+     * | SHIFT  | CTRL   | LGUI   | LALT   | SPACE  |   |        | LEFT   | DOWN   | UP     | RIGHT  |        |
      * '--------+--------+--------+--------+--------+   +-----------------+--------+--------+--------+--------'
      *                   | HELD   | #      |        |   |        |        |        | 
      *                   '--------------------------'   '--------------------------'
