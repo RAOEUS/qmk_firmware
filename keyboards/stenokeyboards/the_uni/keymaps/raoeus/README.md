@@ -2,9 +2,16 @@
 
 The default Uni V2 keymap made it impossible to use as your only board. I was tired of using a virtual keyboard to sign in to my OS, so this is my solution.
 
-To compile this keymap `make stenokeyboards/the_uni/pro_micro:raoeus`
+> **NOTE**: This is untested on the V3 and V4.
 
-To compile _and_ flash, please run `make stenokeyboards/the_uni/pro_micro:raoeus:flash`
+    # version 1 and 2
+    make stenokeyboards/the_uni/pro_micro:raoeus
+
+    # version 3
+    make stenokeyboards/the_uni/usb_c:raoeus
+
+    # version 4
+    qmk compile -kb stenokeyboards/the_uni/rp_2040 -km raoeus
 
 ## STENO LAYERS
 
