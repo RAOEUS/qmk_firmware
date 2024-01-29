@@ -22,8 +22,8 @@ MULTI key switches to UTILITY layer while held down, and switches to QWERTY laye
      */
 
 ## UTILITY
-This is a momentary utility layer when MULTI is held in steno mode
-This can be used to shift click or control click when needed.
+This is a momentary utility layer when MULTI is held in steno mode. This can be used to shift click or control click when needed, with volume controls.
+
     /* 
      * .---------------------------------------------   .-----------------------------------------------------.
      * |        |        |        |        |        |   |        |        |        |        |        |        |
