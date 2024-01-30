@@ -1,4 +1,4 @@
-j# RAOEUS Layout for the Uni
+# RAOEUS Layout for the Uni
 
 The default Uni V2 keymap made it impossible to use as your only board. I was tired of using a virtual keyboard to sign in to my OS, so this is my solution.
 
