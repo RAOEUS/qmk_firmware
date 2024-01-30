@@ -18,8 +18,10 @@
 
 #include QMK_KEYBOARD_H
 
-// Timing for tapping EXT_STN to switch to QWERTY
-#define TAPPING_TERM 200
+// Timing for double tapping EXT_STN to switch to QWERTY
+#define DOUBLE_TAPPING_TERM 500
+static uint8_t  ext_stn_counter = 0;
+static uint16_t ext_stn_counter_reset_timer = 0;
 static uint16_t ext_stn_timer;
 
 void matrix_init_user(void) {
@@ -124,17 +126,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
         case EXT_STN:
             if (record->event.pressed) {
-                // Key is pressed. Note the time.
                 ext_stn_timer = timer_read();
+                ext_stn_counter++;
                 layer_on(_UTILITY);
             } else {
-                // Key is released. If it was less than TAPPING_TERM since press, switch layers.
-                if (timer_elapsed(ext_stn_timer) < TAPPING_TERM) {
+                if (timer_elapsed(ext_stn_timer) < DOUBLE_TAPPING_TERM && ext_stn_counter > 1) {
                     layer_off(_STENO);
                     layer_on(_QWERTY);
                     layer_move(_QWERTY);
                 }
                 layer_off(_UTILITY);
+
+                if (ext_stn_counter_reset_timer == 0) {
+                    ext_stn_counter_reset_timer = timer_read();
+                }
             }
             return false;
         case LOWER:
@@ -157,5 +162,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
         default:
             return true;
+    }
+}
+
+void matrix_scan_user(void) {
+    // If ext_stn_counter_reset_timer is running and it's been DOUBLE_TAPPING_TERM since it started, reset ext_stn_counter.
+    if (ext_stn_counter_reset_timer > 0 && timer_elapsed(ext_stn_counter_reset_timer) > DOUBLE_TAPPING_TERM) {
+        ext_stn_counter = 0;
+        ext_stn_counter_reset_timer = 0;
     }
 }

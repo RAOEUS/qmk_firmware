@@ -1,6 +1,8 @@
-# RAOEUS Layout for the Uni
+j# RAOEUS Layout for the Uni
 
 The default Uni V2 keymap made it impossible to use as your only board. I was tired of using a virtual keyboard to sign in to my OS, so this is my solution.
+
+I've included builds labeled with their version numbers in this directory.
 
 > **NOTE**: This is untested on the V3 and V4.
 
@@ -16,7 +18,7 @@ The default Uni V2 keymap made it impossible to use as your only board. I was ti
 ## STENO LAYERS
 
 ### STENO
-MULTI key switches to UTILITY layer while held down, and switches to QWERTY layer when tapped
+MULTI key switches to UTILITY layer while held down, and switches to QWERTY layer when double tapped within half a second.
 
     /* 
      * .---------------------------------------------   .-----------------------------------------------------.
