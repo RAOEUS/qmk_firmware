@@ -51,7 +51,8 @@ On the left, we have various modifiers. On the right, we have arrow keys and med
 
 > NOTE: Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
 
-`WXC`or `SC` can be pressed to send a **S**hift **C**lick at the cursor's current location
+- `VM` pressed simultaneously will output `Enter` (like pressing `R-R` in steno mode)
+- `WXC`or `SC` can be pressed to send a **S**hift **C**lick at the cursor's current location
 
     /*
      * .---------------------------------------------   .-----------------------------------------------------.
