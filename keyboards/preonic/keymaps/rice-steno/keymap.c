@@ -70,10 +70,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-----------------------------------------------------------------------------------'
    */
   [_QWERTY] = LAYOUT_preonic_grid(
-      KC_GRV,  KC_1,    KC_2,    KC_3,  KC_4,  KC_5,   KC_6,   KC_7,  KC_8,    KC_9,    KC_0,    KC_BSPC, 
-      KC_TAB,  KC_Q,    KC_W,    KC_E,  KC_R,  KC_T,   KC_Y,   KC_U,  KC_I,    KC_O,    KC_P,    KC_DEL, 
-      KC_ESC,  KC_A,    KC_S,    KC_D,  KC_F,  KC_G,   KC_H,   KC_J,  KC_K,    KC_L,    KC_SCLN, KC_QUOT, 
-      KC_LSFT, KC_Z,    KC_X,    KC_C,  KC_V,  KC_B,   KC_N,   KC_M,  KC_COMM, KC_DOT,  KC_SLSH, KC_ENT, 
+      KC_GRV,  KC_1,    KC_2,    KC_3,  KC_4,  KC_5,   KC_6,   KC_7,  KC_8,    KC_9,    KC_0,    KC_BSPC,
+      KC_TAB,  KC_Q,    KC_W,    KC_E,  KC_R,  KC_T,   KC_Y,   KC_U,  KC_I,    KC_O,    KC_P,    KC_DEL,
+      KC_ESC,  KC_A,    KC_S,    KC_D,  KC_F,  KC_G,   KC_H,   KC_J,  KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+      KC_LSFT, KC_Z,    KC_X,    KC_C,  KC_V,  KC_B,   KC_N,   KC_M,  KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,
       KC_LCTL, KC_LGUI, KC_LALT, STENO, LOWER, KC_SPC, KC_SPC, RAISE, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
       ),
 
@@ -91,10 +91,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-----------------------------------------------------------------------------------'
    */
   [_STENO] = LAYOUT_preonic_grid(
-      STN_N1,  STN_N2,  STN_N3,  STN_N4,  STN_N5,  STN_N6,  STN_N7,  STN_N8,  STN_N9,  STN_NA,  STN_NB,  STN_NC, 
-      STN_RE1, STN_S1,  STN_TL,  STN_PL,  STN_HL,  STN_ST1, STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR, 
-      STN_RE2, STN_S2,  STN_KL,  STN_WL,  STN_RL,  STN_ST2, STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR, 
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN1, KC_BTN2, KC_BTN3, XXXXXXX, XXXXXXX, XXXXXXX, 
+      STN_N1,  STN_N2,  STN_N3,  STN_N4,  STN_N5,  STN_N6,  STN_N7,  STN_N8,  STN_N9,  STN_NA,  STN_NB,  STN_NC,
+      STN_RE1, STN_S1,  STN_TL,  STN_PL,  STN_HL,  STN_ST1, STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR,
+      STN_RE2, STN_S2,  STN_KL,  STN_WL,  STN_RL,  STN_ST2, STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN1, KC_BTN2, KC_BTN3, XXXXXXX, XXXXXXX, XXXXXXX,
       EXT_STN, XXXXXXX, XXXXXXX, STN_N1,  STN_A,   STN_O,   STN_E,   STN_U,   STN_N2,  STN_PWR, STN_FN,  XXXXXXX
       ),
 
@@ -112,10 +112,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-----------------------------------------------------------------------------------'
    */
   [_LOWER] = LAYOUT_preonic_grid(
-      KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,    KC_ASTR,    KC_LPRN, KC_RPRN, KC_BSPC, 
-      KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,    KC_ASTR,    KC_LPRN, KC_RPRN, KC_DEL, 
-      KC_CAPS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS,    KC_PLUS,    KC_LCBR, KC_RCBR, KC_PIPE, 
-      _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  S(KC_NUHS), S(KC_NUBS), KC_HOME, KC_END,  _______, 
+      KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,    KC_ASTR,    KC_LPRN, KC_RPRN, KC_BSPC,
+      KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,    KC_ASTR,    KC_LPRN, KC_RPRN, KC_DEL,
+      KC_CAPS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS,    KC_PLUS,    KC_LCBR, KC_RCBR, KC_PIPE,
+      _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  S(KC_NUHS), S(KC_NUBS), KC_HOME, KC_END,  _______,
       AUTOSH,  _______, _______, _______, _______, _______, _______, _______,    KC_MNXT,    KC_VOLD, KC_VOLU, KC_MPLY
       ),
 
@@ -133,10 +133,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-----------------------------------------------------------------------------------'
    */
   [_RAISE] = LAYOUT_preonic_grid(
-      KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, 
-      KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL, 
-      KC_CAPS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS, 
-      KC_LSFT, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_NUBS, KC_PGDN, KC_PGUP, _______, 
+      KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
+      KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
+      KC_CAPS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
+      KC_LSFT, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_NUBS, KC_PGDN, KC_PGUP, _______,
       KC_LCTL, KC_LGUI, KC_LALT, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
       ),
 
@@ -154,10 +154,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-----------------------------------------------------------------------------------'
    */
   [_ADJUST] = LAYOUT_preonic_grid(
-      KC_F1,    KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12, 
-      RGB_MOD,  QK_BOOT, DB_TOGG, _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL, 
-      RGB_RMOD, _______, MU_NEXT, AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  STENO,   _______, _______, RGB_M_P, 
-      KC_LSFT,  AU_PREV, AU_NEXT, MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, 
+      KC_F1,    KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
+      RGB_MOD,  QK_BOOT, DB_TOGG, _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL,
+      RGB_RMOD, _______, MU_NEXT, AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  STENO,   _______, _______, RGB_M_P,
+      KC_LSFT,  AU_PREV, AU_NEXT, MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI,
       KC_LCTL,  KC_LGUI, KC_LALT, _______, _______, _______, _______, _______, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD
       )
 
@@ -168,80 +168,112 @@ float plover_song[][2]    = SONG(PLOVER_SOUND);
 float plover_gb_song[][2] = SONG(PLOVER_GOODBYE_SOUND);
 #endif
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case AUTOSH:
-      if (record->event.pressed) {
-        // Toggle the auto-shift feature when the custom key code is pressed
-        user_config.auto_shift_enable ^= 1;
-        if (user_config.auto_shift_enable)
-          autoshift_enable();
-        else
-          autoshift_disable();
-      }
-      return false; // Skip all further processing of this key
-    default:
-      return true; // Process all other key codes normally
-    case QWERTY:
-      if (record->event.pressed) {
-#ifdef AUDIO_ENABLE
-        PLAY_SONG(plover_gb_song);
-#endif
-        set_single_persistent_default_layer(_QWERTY);
-      }
-      return false;
-      break;
-    case STENO:
-      if (record->event.pressed) {
-#ifdef AUDIO_ENABLE
-        stop_all_notes();
-        PLAY_SONG(plover_song);
-#endif
-        layer_off(_RAISE);
-        layer_off(_LOWER);
-        layer_off(_ADJUST);
-        layer_on(_STENO);
-        if (!eeconfig_is_enabled()) {
-          eeconfig_init();
+static uint8_t last_layer = _QWERTY;
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    // let QMK handle tri-layer for you
+    layer_state_t new_state = update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
+
+    // find the highest active layer
+    uint8_t highest = _QWERTY;
+    if (new_state & (1UL<<_ADJUST)) {
+        highest = _ADJUST;
+    } else if (new_state & (1UL<<_RAISE)) {
+        highest = _RAISE;
+    } else if (new_state & (1UL<<_LOWER)) {
+        highest = _LOWER;
+    } else if (new_state & (1UL<<_STENO)) {
+        highest = _STENO;
+    }
+
+    // if it changed, tap the corresponding F-key
+    if (highest != last_layer) {
+        switch (highest) {
+            case _QWERTY: tap_code(KC_F13); break;
+            case _STENO:  tap_code(KC_F14); break;
+            case _LOWER:  tap_code(KC_F15); break;
+            case _RAISE:  tap_code(KC_F16); break;
+            case _ADJUST: tap_code(KC_F17); break;
         }
-        keymap_config.raw  = eeconfig_read_keymap();
-        keymap_config.nkro = 1;
-        eeconfig_update_keymap(keymap_config.raw);
-      }
-      return false;
-      break;
-    case LOWER:
-      if (record->event.pressed) {
-        layer_on(_LOWER);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
-      } else {
-        layer_off(_LOWER);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
-      }
-      return false;
-      break;
-    case RAISE:
-      if (record->event.pressed) {
-        layer_on(_RAISE);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
-      } else {
-        layer_off(_RAISE);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
-      }
-      return false;
-      break;
-    case EXT_STN:
-      if (record->event.pressed) {
+        last_layer = highest;
+    }
+    return new_state;
+}
+
+//----------------------------------------------------------------------
+// process_record_user: only QWERTY & auto-shift toggles here
+//----------------------------------------------------------------------
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case AUTOSH:
+            if (record->event.pressed) {
+                user_config.auto_shift_enable ^= 1;
+                if (user_config.auto_shift_enable) autoshift_enable();
+                else                                  autoshift_disable();
+            }
+            return false;
+
+        case QWERTY:
+            if (record->event.pressed) {
 #ifdef AUDIO_ENABLE
-        PLAY_SONG(plover_gb_song);
+                PLAY_SONG(plover_gb_song);
 #endif
-        layer_off(_STENO);
-      }
-      return false;
-      break;
-  }
-  return true;
-};
+                set_single_persistent_default_layer(_QWERTY);
+                // beacon for QWERTY
+                tap_code(KC_F13);
+            }
+            return false;
+
+        case STENO:
+            if (record->event.pressed) {
+#ifdef AUDIO_ENABLE
+                stop_all_notes();
+                PLAY_SONG(plover_song);
+#endif
+                // turn off other layers, turn on steno
+                layer_off(_RAISE);
+                layer_off(_LOWER);
+                layer_off(_ADJUST);
+                layer_on(_STENO);
+                if (!eeconfig_is_enabled()) eeconfig_init();
+                keymap_config.raw  = eeconfig_read_keymap();
+                keymap_config.nkro = 1;
+                eeconfig_update_keymap(keymap_config.raw);
+                // no manual beacon here—layer_state_set_user covers it
+            }
+            return false;
+
+        case LOWER:
+            if (record->event.pressed) {
+                layer_on(_LOWER);
+            } else {
+                layer_off(_LOWER);
+            }
+            return false;
+
+        case RAISE:
+            if (record->event.pressed) {
+                layer_on(_RAISE);
+            } else {
+                layer_off(_RAISE);
+            }
+            return false;
+
+        case EXT_STN:
+            if (record->event.pressed) {
+#ifdef AUDIO_ENABLE
+                PLAY_SONG(plover_gb_song);
+#endif
+                layer_off(_STENO);
+                // no manual beacon here either
+            }
+            return false;
+
+        default:
+            return true;
+    }
+}
 
 bool     muse_mode      = false;
 uint8_t  last_muse_note = 0;
