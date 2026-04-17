@@ -35,7 +35,7 @@ Hold down the MULTI key in the STENO layer to use these keys momentarily.
 
 On the left, we have various modifiers. On the right, we have arrow keys and media controls.
 
-- The SPACE thumb key may be held for Left Shift key (used in many shortcuts, so necessary)
+The SPACE thumb key may be held for Left Shift key (used in many shortcuts, so necessary)
 
     /* 
      * .---------------------------------------------   .-----------------------------------------------------.
