@@ -35,6 +35,8 @@ Hold down the MULTI key in the STENO layer to use these keys momentarily.
 
 On the left, we have various modifiers. On the right, we have arrow keys and media controls.
 
+- The SPACE thumb key may be held for Left Shift key (used in many shortcuts, so necessary)
+
     /* 
      * .---------------------------------------------   .-----------------------------------------------------.
      * |        |        |        |        |        |   | MPREV  | VOLUP  | VOLDN  | MNEXT  |        |        |
@@ -51,6 +53,7 @@ On the left, we have various modifiers. On the right, we have arrow keys and med
 
 - `VM` pressed simultaneously will output `Enter` (like pressing `R-R` in steno mode)
 - `WXC`or `SC` can be pressed to send a **S**hift **C**lick at the cursor's current location
+- The SPACE thumb key may be held for Left Shift key (used in many shortcuts, so necessary)
 
 > NOTE: Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
 
@@ -69,6 +72,7 @@ On the left, we have various modifiers. On the right, we have arrow keys and med
 ### LOWER
 
 Hold the LOWER key in QWERTY mode to use this layer.
+- The SPACE thumb key may be held for Left Shift key (used in many shortcuts, so necessary)
 
 > NOTE: Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
 
@@ -87,6 +91,7 @@ Hold the LOWER key in QWERTY mode to use this layer.
 ### RAISE
 
 Hold the RAISE key in QWERTY mode to use this layer.
+- The SPACE thumb key may be held for Left Shift key (used in many shortcuts, so necessary)
 
 > NOTE: Row 2 is the combined key presses of the corresponding keys above and below on lines 1 and 3
 
